@@ -4,17 +4,16 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() {
      printf("\n*-----------------------------------------------------------------------------*");
     printf("\n*---------------------------- SUPER TRUNFO -----------------------------------*");
     printf("\n*-----------------------------------------------------------------------------*");
     
-    printf("\nQual o pais do jogo? ");
+    printf("\nQual o país do jogo? ");
     char pais[30];
     scanf(" %[^\n]",&pais);
-    printf("Pais informado: %s\n\n",pais);
+    printf("País informado: %s\n\n",pais);
     
     /* As variaveis são compostas por:
         X_Y_Z

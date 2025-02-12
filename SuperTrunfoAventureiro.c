@@ -1,8 +1,18 @@
+/*
+Desafio: Super Trunfo
+Nível: Aventureiro
+
+Desafio: Calcular Densidade Demográfica e Renda per Capita a partir das entradas de dados
+
+*/
 #include<stdio.h>
+//Função para calcular densidade demográfica
 int calcularDensidade(int pop,float km){
     int densidade=pop/(int)km;
     return densidade;
 }
+
+//função para calcular a renda per capita
 float calcularRenda(float PIB,int POP){
     float renda=PIB/(float)POP;
     return renda;
@@ -13,10 +23,19 @@ int main(){
     printf("\n*---------------------------- SUPER TRUNFO -----------------------------------*");
     printf("\n*-----------------------------------------------------------------------------*");
     
-    printf("\nQual o pais do jogo? ");
+    printf("\nQual o país do jogo? ");
     char pais[30];
     scanf(" %[^\n]",&pais);
-    printf("Pais informado: %s\n\n",pais);
+    printf("País informado: %s\n\n",pais);
+
+    /* As variaveis são compostas por:
+        X_Y_Z
+
+        Onde:
+        X > Código do estado (variando de A até H)
+        Y > Número da cidade naquele estado (variando de 1 a 4)
+        Z > Atributo daquela carta (Estado, Nome da cidade, população, etc)
+    */
 
    	//ESTADO: A
     //Carta 1
@@ -322,7 +341,7 @@ int main(){
     printf("\nPontos turisticos: %d",A_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(A_1_POP,A_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(A_1_PIB,A_1_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(A_1_PIB,A_1_POP));
     
     //Carta 2
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -351,7 +370,7 @@ int main(){
     printf("\nPontos turisticos: %d",A_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(A_2_POP,A_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(A_2_PIB,A_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(A_2_PIB,A_2_POP));
     
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -380,7 +399,7 @@ int main(){
     printf("\nPontos turisticos: %d",A_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(A_3_POP,A_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(A_3_PIB,A_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(A_3_PIB,A_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -409,7 +428,7 @@ int main(){
     printf("\nPontos turisticos: %d",A_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(A_4_POP,A_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(A_4_PIB,A_4_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(A_4_PIB,A_4_POP));
 
     //Estado B
     printf("Estado: B\n");
@@ -440,7 +459,7 @@ int main(){
     printf("\nPontos turisticos: %d",B_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(B_1_POP,B_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(B_1_PIB,B_1_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(B_1_PIB,B_1_POP));
 
     //Carta 2
     printf("\nProxima carta\n");
@@ -469,7 +488,7 @@ int main(){
     printf("\nPontos turisticos: %d",B_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(B_2_POP,B_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(B_2_PIB,B_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(B_2_PIB,B_2_POP));
 
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -498,7 +517,7 @@ int main(){
     printf("\nPontos turisticos: %d",B_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(B_3_POP,B_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(B_3_PIB,B_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(B_3_PIB,B_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -527,7 +546,7 @@ int main(){
     printf("\nPontos turisticos: %d",B_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(B_4_POP,B_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(B_4_PIB,B_4_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(B_4_PIB,B_4_POP));
 
 	//Estado C
     printf("Estado: C\n");
@@ -558,7 +577,7 @@ int main(){
     printf("\nPontos turisticos: %d",C_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(C_1_POP,C_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(C_1_PIB,C_1_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(C_1_PIB,C_1_POP));
 
     //Carta 2
     printf("\nProxima carta\n");
@@ -587,7 +606,7 @@ int main(){
     printf("\nPontos turisticos: %d",C_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(C_2_POP,C_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(C_2_PIB,C_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(C_2_PIB,C_2_POP));
     
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -616,7 +635,7 @@ int main(){
     printf("\nPontos turisticos: %d",C_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(C_3_POP,C_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(C_3_PIB,C_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(C_3_PIB,C_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -645,7 +664,7 @@ int main(){
     printf("\nPontos turisticos: %d",C_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(C_4_POP,C_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(C_4_PIB,C_4_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(C_4_PIB,C_4_POP));
 
 	//Estado D
     printf("Estado: D\n");
@@ -676,7 +695,7 @@ int main(){
     printf("\nPontos turisticos: %d",D_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(D_1_POP,D_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(D_1_PIB,D_1_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(D_1_PIB,D_1_POP));
 
     //Carta 2
     printf("\nProxima carta\n");
@@ -705,7 +724,7 @@ int main(){
     printf("\nPontos turisticos: %d",D_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(D_2_POP,D_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(D_2_PIB,D_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(D_2_PIB,D_2_POP));
 
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -734,7 +753,7 @@ int main(){
     printf("\nPontos turisticos: %d",D_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(D_3_POP,D_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(D_3_PIB,D_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(D_3_PIB,D_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -763,7 +782,7 @@ int main(){
     printf("\nPontos turisticos: %d",D_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(D_4_POP,D_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(D_4_PIB,D_4_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(D_4_PIB,D_4_POP));
 
 	//Estado E
     printf("Estado: E\n");
@@ -794,7 +813,7 @@ int main(){
     printf("\nPontos turisticos: %d",E_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(E_1_POP,E_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(E_1_PIB,E_1_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(E_1_PIB,E_1_POP));
 
     //Carta 2
     printf("\nProxima carta\n");
@@ -823,7 +842,7 @@ int main(){
     printf("\nPontos turisticos: %d",E_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(E_2_POP,E_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(E_2_PIB,E_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(E_2_PIB,E_2_POP));
 
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -852,7 +871,7 @@ int main(){
     printf("\nPontos turisticos: %d",E_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(E_3_POP,E_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(E_3_PIB,E_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(E_3_PIB,E_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -881,7 +900,7 @@ int main(){
     printf("\nPontos turisticos: %d",E_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(E_4_POP,E_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(E_4_PIB,E_4_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(E_4_PIB,E_4_POP));
 
 	//Estado F
     printf("Estado: F\n");
@@ -912,7 +931,7 @@ int main(){
     printf("\nPontos turisticos: %d",F_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(F_1_POP,F_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(F_1_PIB,F_1_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(F_1_PIB,F_1_POP));
 
     //Carta 2
     printf("\nProxima carta\n");
@@ -941,7 +960,7 @@ int main(){
     printf("\nPontos turisticos: %d",F_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(F_2_POP,F_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(F_2_PIB,F_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(F_2_PIB,F_2_POP));
 
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -970,7 +989,7 @@ int main(){
     printf("\nPontos turisticos: %d",F_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(F_3_POP,F_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(F_3_PIB,F_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(F_3_PIB,F_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -999,7 +1018,7 @@ int main(){
     printf("\nPontos turisticos: %d",F_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(F_4_POP,F_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(F_4_PIB,F_4_POP)); 
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(F_4_PIB,F_4_POP)); 
 
 	//Estado G
     printf("Estado: G\n");
@@ -1030,7 +1049,7 @@ int main(){
     printf("\nPontos turisticos: %d",G_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(G_1_POP,G_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(G_1_PIB,G_1_POP)); 
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(G_1_PIB,G_1_POP)); 
 
     //Carta 2
     printf("\nProxima carta\n");
@@ -1059,7 +1078,7 @@ int main(){
     printf("\nPontos turisticos: %d",G_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(G_2_POP,G_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(G_2_PIB,G_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(G_2_PIB,G_2_POP));
 
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -1088,7 +1107,7 @@ int main(){
     printf("\nPontos turisticos: %d",G_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(G_3_POP,G_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(G_3_PIB,G_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(G_3_PIB,G_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -1117,7 +1136,7 @@ int main(){
     printf("\nPontos turisticos: %d",G_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(G_4_POP,G_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(G_4_PIB,G_4_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(G_4_PIB,G_4_POP));
 
 	//Estado H
     printf("Estado: H\n");
@@ -1148,7 +1167,7 @@ int main(){
     printf("\nPontos turisticos: %d",H_1_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(H_1_POP,H_1_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(H_1_PIB,H_1_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(H_1_PIB,H_1_POP));
 
     //Carta 2
     printf("\nProxima carta\n");
@@ -1177,7 +1196,7 @@ int main(){
     printf("\nPontos turisticos: %d",H_2_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(H_2_POP,H_2_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(H_2_PIB,H_2_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(H_2_PIB,H_2_POP));
 
     //Carta 3
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -1206,7 +1225,7 @@ int main(){
     printf("\nPontos turisticos: %d",H_3_TUR);   
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(H_3_POP,H_3_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(H_3_PIB,H_3_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(H_3_PIB,H_3_POP));
 
     //Carta 4
     printf("-----------------------------------------------------------\nProxima carta\n");
@@ -1235,7 +1254,7 @@ int main(){
     printf("\nPontos turisticos: %d",H_4_TUR);
     //Calcular densidade demográfica e renda per capita
     printf("\nDensidade Populacional: %d pessoas/km²",calcularDensidade(H_4_POP,H_4_KM));
-    printf("\nPIB per Capita: R$ %.2f /ano\n\n",calcularRenda(H_4_PIB,H_4_POP));
+    printf("\nPIB per Capita: $$ %.2f /ano\n\n",calcularRenda(H_4_PIB,H_4_POP));
     
     printf("\nPrograma finalizado com sucesso!");
     return 0;
