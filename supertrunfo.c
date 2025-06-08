@@ -3,7 +3,18 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Objetivo: Cadastrar 2 cartas e exibir os valores capturados.
-// Nível: NOVATO
+// Nível: AVENTUREIRO
+
+//Função para calcular a Densidade Demográfica
+int calcularDensidade(int pop,float km){
+    int densidade=pop/(int)km;
+    return densidade;
+}
+//Função para Calcular Renda Per Capita
+float calcularRenda(float PIB,int POP){
+    float renda=PIB/(float)POP;
+    return renda;
+}
 
 int main() {
     printf("\n*-----------------------------------------------------------------------------*");
@@ -18,6 +29,8 @@ int main() {
     float area1;
     float pib1;
     int turismo1;
+    float densidade1;
+    float rendaPIB1;
 	
     //Variáveis carta 2
     char estado2;
@@ -27,6 +40,8 @@ int main() {
     float area2;
     float pib2;
     int turismo2;
+    float densidade2;
+    float rendaPIB2;
 	
     //Leitura dos dados da carta 1
     printf("\n\n=== Carta 1 ===\n");
@@ -73,7 +88,12 @@ int main() {
     printf("\nArea: %.2f",area1);
     printf("\nPIB: %.2f bilhoes de reais",pib1);
     printf("\nNumero de Pontos Turisticos: %d",turismo1);
-	
+	//Calcular densidade demográfica e renda per capita
+    densidade1=calcularDensidade(populacao1,area1);
+    rendaPIB1=calcularRenda(pib1,populacao1);
+    printf("\nDensidade Populacional: %.2f pessoas/km2",densidade1);
+    printf("\nPIB per Capita: R$ %.2f /ano\n\n",rendaPIB1);
+
 	//Carta 2
     printf("\n\n=== Carta 2 ===");
     printf("\nEstado: %c",estado2);
@@ -83,6 +103,12 @@ int main() {
     printf("\nArea: %.2f",area2);
     printf("\nPIB: %.2f bilhoes de reais",pib2);
     printf("\nNumero de Pontos Turisticos: %d",turismo2);
-	
+    //Calcular densidade demográfica e renda per capita
+    densidade2=calcularDensidade(populacao2,area2);
+    rendaPIB2=calcularRenda(pib2,populacao2);
+    printf("\nDensidade Populacional: %.2f pessoas/km2",densidade2);
+    printf("\nPIB per Capita: R$ %.2f /ano\n\n",rendaPIB2);
+        
+    printf("\nPrograma finalizado com sucesso!");	
     return 0;
 }
