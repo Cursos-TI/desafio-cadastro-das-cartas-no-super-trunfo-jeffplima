@@ -6,8 +6,8 @@
 // Nível: AVENTUREIRO
 
 //Função para calcular a Densidade Demográfica
-int calcularDensidade(int pop,float km){
-    int densidade=pop/(int)km;
+float calcularDensidade(int pop,float km){
+    float densidade=(float)pop/km;
     return densidade;
 }
 //Função para Calcular Renda Per Capita
